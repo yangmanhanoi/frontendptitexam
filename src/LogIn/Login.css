@@ -1,0 +1,62 @@
+* {
+    font-family: "Roboto", sans-serif;
+  }
+  
+  *:has(#user-login) {
+    font-size: 1.2rem;
+  }
+  
+  #user-login .logo-img {
+    width: 6rem;
+  }
+  .bg-holder{
+    background-image: url('https://res.cloudinary.com/das5netom/image/upload/v1715136444/side_background_image_dez2my.jpg');
+  }
+  #user-login .btn-outline-custom {
+    color: #31374a;
+    border-color: #ddd;
+  }
+  #user-login .btn-outline-custom:hover {
+    color: #31374a;
+    border-color: #eee;
+    background-color: #eee;
+  }
+  #user-login .btn {
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+  #user-login #btn-login {
+    background-color: #de2219;
+    color: #fff;
+  }
+  #user-login #btn-login:hover {
+    background-color: #c81f17;
+  }
+  #user-login .btn i {
+    vertical-align: text-top;
+  }
+  #user-login .bg-holder {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #user-login .divider-content-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    background-color: #fff;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #999;
+  }
+  #user-login .divider {
+    margin: 0.2rem 0;
+  }

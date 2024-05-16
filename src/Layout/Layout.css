@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+ .navbar {
+    height: 4.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #c81f17;
+    box-shadow: 1px 8px 10px 1px rgba(0, 0, 0, 0.2);
+  }
+  
+   .navbar .navbar-brand img {
+    border-radius: 50%;
+    max-width: 2.8rem;
+    background: #fff;
+    text-align: center;
+  }
+  
+   .navbar .nav-item {
+    font-size: 1.8rem;
+    opacity: 0.8;
+    transition: all 0.25s ease;
+  }
+   .navbar .nav-item .nav-link {
+    color: #fff;
+  }
+  
+   .navbar .nav-item:hover {
+    opacity: 1;
+  }
+  
+   .navbar .nav-item.inPage {
+    opacity: 1;
+  }
+  
+   .navbar .dropdown-menu .dropdown-item {
+    transition: all 0.25s ease;
+    color: #c81f17;
+    opacity: 0.7;
+  }
+   .navbar .dropdown-menu .dropdown-item:hover {
+    opacity: 1;
+  }
+   .navbar .navbar-nav .dropdown-menu .dropdown-item {
+    opacity: 0.7;
+    transition: all 0.25s ease;
+    font-size: 1.2rem;
+  }
+   .navbar .navbar-nav .dropdown-menu .dropdown-item:hover {
+    opacity: 1;
+  }
+  

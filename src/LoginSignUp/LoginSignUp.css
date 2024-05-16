@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+*:has(#user-register) {
+  font-size: 1.1rem;
+}
+
+#user-register .logo-img {
+  width: 6rem;
+}
+#user-register .gender{
+    font-size: 0.9rem;
+    font-family: "Roboto", sans-serif;
+}
+#user-register .gender-div{
+    display: flex;
+    align-items: center;
+    
+}
+
+#user-register .btn-outline-custom {
+  color: #31374a;
+  border-color: #ddd;
+}
+#user-register .btn-outline-custom:hover {
+  color: #31374a;
+  border-color: #eee;
+  background-color: #eee;
+}
+#user-register .btn {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+#user-register #btn-login {
+  background-color: #de2219;
+  color: #fff;
+}
+#user-register #btn-login:hover {
+  background-color: #c81f17;
+}
+#user-register .btn i {
+  vertical-align: text-top;
+}
+#user-register .bg-holder {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#user-register .divider-content-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background-color: #fff;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #999;
+}
+#user-register .divider {
+  margin: 0.2rem 0;
+}
+
+#user-register .main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+#user-register .form-container {
+  width: 20rem;
+  height: 30rem;
+}
+
+#user-register .error-message {
+  color: red;
+}
+
+#user-register .btn btn-primary {
+  align-self: center;
+}
