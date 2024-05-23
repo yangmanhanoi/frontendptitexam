@@ -1,0 +1,168 @@
+.main-content {
+  margin: 1.8rem 2.4rem;
+  height: 100vh; /* Ensure the main content takes the full viewport height */
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content .main-content-head {
+  margin-bottom: 2rem;
+  color: #c81f17;
+}
+
+.main-content .card {
+  box-shadow: 1px 8px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.main-content .table-question-card .card-title {
+  font-size: 1.8rem !important;
+}
+
+.main-content .table-question-card {
+  min-height: 25rem;
+  overflow-y: auto;
+}
+
+.main-content .table-question-card .table-question {
+  margin: 1.6rem 0.2rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.4rem;
+}
+
+.main-content .right-side .save-btn {
+  color: #fff;
+  border: none;
+  background-color: #37b24d;
+  transition: all 0.3s ease;
+  padding: 0.4rem 0.6rem;
+}
+
+.main-content .right-side .save-btn:hover {
+  background-color: #2f9e44;
+}
+
+.main-content .left-side ul {
+  list-style: none;
+}
+
+/* Ensure the exam content is scrollable and takes the remaining height */
+.main-content .exam-content {
+  flex: 1;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 6px;
+  padding: 0 2.4rem 3.8rem 2.4rem !important;
+  max-height: 75vh;
+}
+
+.main-content .exam-content .add-question-btn {
+  display: flex;
+  align-items: center;
+  background-color: #c81f17;
+  justify-content: center;
+  border: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  padding: 0.6rem 0.6rem;
+  margin-top: 4.8rem;
+}
+
+.main-content .exam-content .add-question-btn:hover {
+  background-color: #ce352e;
+  scale: 1.02;
+}
+
+.main-content .input-group .input-group-text {
+  background-color: #d9625d;
+  color: #fff;
+}
+
+.main-content .input-exam-type {
+  margin-top: 1.2rem;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.main-content .input-exam-type input:focus {
+  box-shadow: 0 0.5rem 1rem rgba(200, 32, 23, 0.1);
+  border: #c81f17;
+}
+
+.main-content .input-exam-type input[type="radio"]:checked + label {
+  color: #c81f17;
+}
+
+.main-content .input-exam-type input[type="radio"]:checked {
+  background-color: #c81f17;
+  border: none;
+}
+
+.main-content .input-group input:focus {
+  box-shadow: 0 0.5rem 1rem rgba(200, 32, 23, 0.1);
+  border: 1px solid #c81f17;
+}
+
+.main-content .left-side .question-card {
+  box-shadow: 1px 8px 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+.main-content .left-side .question-card .card-header {
+  background-color: #fff;
+  color: #c81f17;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-content .left-side .question-card .card-header .btn-delete {
+  border-radius: 6px;
+  padding: 0;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.main-content .left-side .question-card .card-header .btn-delete:hover i {
+  color: #e6e8ea;
+}
+
+.main-content .left-side .question-card .card-header .btn-delete i {
+  padding: 0.2rem 0.4rem;
+  font-size: 1.8rem;
+  color: #fff;
+  background-color: #c81f17;
+  vertical-align: middle;
+}
+
+.main-content .input-group .answer-card-head {
+  height: 3.2rem;
+  font-size: 1.4rem;
+  background-color: #e6e8ea;
+  transition: all 0.2s ease;
+}
+
+.main-content .table-question-item {
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  height: 2.8rem;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px #707070;
+  padding: 0.4rem 0.6rem;
+  transition: all 0.15s ease;
+}
+
+.main-content .table-question-item:hover {
+  background-color: #e6e8ea;
+}
+
+.main-content .table-question-item.active {
+  scale: 1.01;
+  border: solid 2px #c81f17;
+}

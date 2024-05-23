@@ -1,0 +1,155 @@
+.modal {
+  max-height: 60rem;
+}
+
+.modal-content .modal-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-content .modal-header .btn-delete {
+  background-color: #b41c15;
+  color: #fff;
+}
+
+.modal-content .modal-header .btn-delete:hover {
+  background-color: #8c1610;
+}
+
+.modal-content .table-question-card {
+  min-height: 27rem;
+  overflow-y: auto;
+}
+
+.modal-content .table-question-card .table-question {
+  margin: 1.6rem 0.2rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.4rem;
+}
+
+.modal-content .right-side .save-btn {
+  color: #fff;
+  border: none;
+  background-color: #37b24d;
+  transition: all 0.3s ease;
+  padding: 0.4rem 0.6rem;
+}
+
+.modal-content .right-side .save-btn:hover {
+  background-color: #2f9e44;
+}
+
+.modal-content .left-side ul {
+  list-style: none;
+}
+
+.modal-content .exam-content {
+  height: 65vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 6px;
+  padding: 0 2.4rem 2.4rem 2.4rem !important;
+}
+
+.modal-content .modal-body .input-group .input-group-text {
+  background-color: #d9625d;
+  color: #fff;
+}
+
+.modal-content .modal-body .input-exam-type {
+  margin-top: 1.2rem;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.modal-content .modal-body .input-exam-type input:focus {
+  box-shadow: 0 0.5rem 1rem rgba(200, 32, 23, 0.1);
+  border: #c81f17;
+}
+
+.modal-content .add-question-item-btn {
+  display: flex;
+  align-items: center;
+  background-color: #d9625d;
+  justify-content: center;
+  border: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  padding: 0.6rem 0.6rem;
+  margin-top: 1.2rem;
+}
+
+.modal-content .add-question-item-btn:hover {
+  background-color: #ce352e;
+  scale: 1.02;
+}
+
+.main-section
+  .modal-content
+  .modal-body
+  .input-exam-type
+  input[type="radio"]:checked
+  + label {
+  color: #c81f17;
+}
+
+.main-section
+  .modal-content
+  .modal-body
+  .input-exam-type
+  input[type="radio"]:checked {
+  background-color: #c81f17;
+}
+
+.modal-content .modal-body .input-group input:focus {
+  box-shadow: 0 0.5rem 1rem rgba(200, 32, 23, 0.1);
+  border: 1px solid #c81f17;
+}
+
+.modal-content .left-side .question-card {
+  box-shadow: 1px 8px 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content .left-side .question-card .card-header {
+  background-color: #ce352e;
+  color: #fff;
+}
+
+.modal-content .modal-body .input-group .answer-card-head {
+  height: 3.2rem;
+  font-size: 1.4rem;
+  background-color: #e6e8ea;
+  transition: all 0.2s ease;
+}
+
+.modal-content .modal-body .table-question-item {
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  height: 2.8rem;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px #707070;
+  padding: 0.4rem 0.6rem;
+  transition: all 0.15s ease;
+}
+
+.main-section
+  .modal-content
+  .modal-body
+  .table-question-item
+  .table-question-item:hover {
+  background-color: #e6e8ea;
+}
+
+.modal-content .modal-body .table-question-item.active {
+  scale: 1.01;
+  border: solid 2px #c81f17;
+}

@@ -1,0 +1,61 @@
+.navbar {
+  height: 4.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #c81f17;
+  box-shadow: 1px 8px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .sidebar-btn {
+  color: #fff;
+  font-size: 2.8rem;
+  cursor: pointer;
+}
+
+.navbar .nav-right {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.navbar .navbar-userprofile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  transition: all 0.25s ease;
+}
+
+.navbar .navbar-userprofile-avatar {
+  height: 2.8rem;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-right: 1rem;
+}
+
+.navbar .navbar-userprofile .navbar-profile-icon {
+  font-size: 2.2rem;
+  color: #fff;
+  transition: all 0.25s ease;
+}
+
+.navbar .navbar-userprofile.show .navbar-profile-icon {
+  transform: rotate(-90deg);
+}
+
+.navbar .navbar-nav .dropdown-menu {
+  transition: all 0.25s ease;
+  border: 0;
+  box-shadow: 1px 8px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .navbar-nav .dropdown-menu .dropdown-item {
+  color: #c81f17;
+  opacity: 0.7;
+  transition: all 0.25s ease;
+  font-size: 1.2rem;
+}
+.navbar .navbar-nav .dropdown-menu .dropdown-item:hover {
+  opacity: 1;
+}
