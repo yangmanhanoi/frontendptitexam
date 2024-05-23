@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
-const Question = ({ question, index, handleClick }) => {
+const Question = ({ question, index, handleClick, flag }) => {
     const list = {
         '1': 'A',
         '2': 'B',
@@ -15,7 +15,7 @@ const Question = ({ question, index, handleClick }) => {
     };
     return (
         <>
-            <ul className="d-flex flex-column mt-4 ps-0 pe-5 gap-3">
+            {flag === 1 && <ul className="d-flex flex-column mt-4 ps-0 pe-5 gap-3">
                 {question.questionAnswers.map((answer, idx) => (
                     <li key={idx} className={!(selectedAnswer === idx) ? "answer-card card border-secondary" : "active answer-card card border-secondary"} onClick={() => handleItemClick(`${index}_${idx}`)}>
                         <div className="answer-option d-flex align-items-center">
@@ -27,7 +27,20 @@ const Question = ({ question, index, handleClick }) => {
                     </li>
                 ))}
 
-            </ul>
+            </ul>}
+            {flag === 0 && <ul className="d-flex flex-column mt-4 ps-0 pe-5 gap-3">
+                {question.questionAnswers.map((answer, idx) => (
+                    <li key={idx} className= {(question.correctAnswer === idx) ? "answer-card-correct answer-card card" : ((question.userAnswer === idx && question.userAnswer !== question.correctAnswer) ? "answer-card-error answer-card card" : "answer-card-normal answer-card card")} >
+                        <div className="answer-option d-flex align-items-center">
+                            <div className="answer-card-head  align-self-stretch d-flex align-items-center px-4">{list[idx + 1]}</div>
+                            <div className="answer-card-body ms-3 d-flex flex-shrink-1">
+                                <p className="card-text">{answer.answer}</p>
+                            </div>
+                        </div>
+                    </li>
+                ))}
+            </ul>}
+
         </>
     )
 }

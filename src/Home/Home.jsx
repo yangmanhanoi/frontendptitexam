@@ -1,7 +1,7 @@
 import React, { createContext } from 'react'
 import Quizz from '../Quizz/Quizz'
 import './Home.css'
-import { useHistory, useNavigate } from 'react-router-dom';
+import { useHistory, useNavigate, useLocation } from 'react-router-dom';
 import { Button, Dialog, DialogTitle, DialogContent, DialogActions, Slide, DialogContentText } from '@mui/material'
 import { useState, useEffect } from 'react'
 import useAxiosFetch from '../hooks/useAxiosFetch';
@@ -12,6 +12,8 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 });
 const Home = () => {
     const navigate = useNavigate()
+    const location = useLocation()
+    const user = location.state
     const pageNumberLimit = 5;
     const [search, setSearch] = useState('')
     const [timeOption, setTimeOption] = useState('all')
@@ -25,7 +27,7 @@ const Home = () => {
     const [open, setOpen] = useState(false);
     const [pageSize, setPageSize] = useState(10)
     const [quizzes, setQuizzes] = useState([])
-    const { data, isLoading, fetchError, totalPages } = useAxiosFetch('http://localhost:9999/api/quizzes', currentPage - 1, pageSize, timeOption, sortOption)
+    const { data, isLoading, fetchError, totalPages } = useAxiosFetch('http://localhost:8000/api/quizzes', currentPage - 1, pageSize, timeOption, sortOption)
 
     const fields = [
         { 'title': 'Tên bài thi' },
@@ -58,7 +60,7 @@ const Home = () => {
     const handleRegister = (e) => {
         e.preventDefault()
         console.log(selectedQuizz.id)
-        axios.post(`http://localhost:9999/api/users/1/register-quizz/${selectedQuizz.id}`, {})
+        axios.post(`http://localhost:8000/api/users/${user.userId}/register-quizz/${selectedQuizz.id}`, {})
         .then(response => {
             console.log('Đã gọi API thành công:', response.data);
             setOpen(false)

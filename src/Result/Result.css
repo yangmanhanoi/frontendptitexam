@@ -488,11 +488,18 @@
     display: flex;
     flex-direction: column;
   } */
+.point-correct{
+  color: rgb(56, 142, 60);
+}
+.point-error{
+  color: #c81f17;
+}
   .pie-div{
     display: flex;
     align-items: center;
     justify-content: center;
   }
+  
   .card-header {
     border-bottom-width: 1px;
     background-color: #fff;
@@ -504,6 +511,14 @@
   .card-header:first-child {
     border-radius: var(--bs-card-inner-border-radius)
       var(--bs-card-inner-border-radius) 0 0;
+  }
+  .header-correct{
+    background-color: rgb(56, 142, 60);
+    color: white;
+  }
+  .header-error{
+    background-color: #c81f17;
+    color: white;
   }
   .card-title {
     color: #939ba2;

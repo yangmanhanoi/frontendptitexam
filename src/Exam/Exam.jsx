@@ -17,7 +17,7 @@ const Exam = () => {
     const [submitTime, setSubmitTime] = useState(null)
     const visitTimeRef = useRef(null);
    
-    const { data, isLoading, fetchError } = useAxiosFetch('http://localhost:9999/api/quizzes/1', 1)
+    const { data, isLoading, fetchError } = useAxiosFetch('http://localhost:8000/api/quizzes/1', 1)
     
     
     
@@ -98,7 +98,7 @@ const Exam = () => {
                                         <h5 className="card-header">Question {index + 1}</h5>
                                         <div className="card-body">
                                             <p className="card-text fs-4">Câu hỏi cho {question.questionContent}</p>
-                                            <Question question={question} index={index} handleClick={handleUserAnswer} />
+                                            <Question question={question} index={index} handleClick={handleUserAnswer} flag={1} />
 
 
                                         </div>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './Layout.css'
 import { Navbar, Container, Nav, NavDropdown, InputGroup, Image } from 'react-bootstrap';
 import AuthGuard from '../AuthGuard/AuthGuard';
@@ -6,6 +6,8 @@ import { Link, Outlet } from 'react-router-dom';
 
 
 const Layout = () => {
+    const data =  localStorage.getItem('user')
+    const user = JSON.parse(data)
   return (
     <>
         <nav className="navbar navbar-expand-lg ">
@@ -29,7 +31,7 @@ const Layout = () => {
                         </li>
 
                         <li className="nav-item inPage">
-                            <Link to="/history" className="nav-link active" aria-current="page" href="#">Lịch sử</Link>
+                            <Link to="/history" className="nav-link active" aria-current="page" href="#">Chat Bot</Link>
                         </li>
                     </ul>
 
@@ -39,7 +41,7 @@ const Layout = () => {
                             <i className="bi bi-person-circle"></i>
                             <img src="/img/user_profile.jpg" alt="Your Avatar" className="rounded-circle" height="35"
                                 width="35"/>
-                            <span>Penalty King</span>
+                            <span>{user.username}</span>
                         </a>
                         <ul className="dropdown-menu dropdown-menu-end">
                             <li className="user-className-profile"><a href="#" className="dropdown-item"><i

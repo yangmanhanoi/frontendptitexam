@@ -4,7 +4,7 @@ const AuthGuard = ({element}) => {
     const user = localStorage.getItem('user')
     // test: user mặc dịnh cho true
     // thực tế: user
-  if(user){
+  if(!user){
     return <Navigate to="/login" replace/>
         
         

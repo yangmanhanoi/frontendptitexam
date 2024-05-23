@@ -7,7 +7,7 @@ import { Button, Dialog, DialogContent, DialogContentText, DialogTitle, DialogAc
 import axios from 'axios';
 const MyQuizz = () => {
   const navigate = useNavigate()
-  const { data, isLoading, fetchError } = useAxiosFetch('http://localhost:9999/api/users/1/quizzes', null, null, null, null)
+  const { data, isLoading, fetchError } = useAxiosFetch('http://localhost:8000/api/users/1/quizzes', null, null, null, null)
   const [postLoading, setPostLoading] = useState(false)
   const [myQuizzes, setMyQuiz] = useState([]);
   const subjects = ["Nhập môn công nghệ phần mềm", "An toàn bảo mật thông tin", "Nhập môn trí tuệ nhân tạo", "Lập trình Web"]
@@ -21,7 +21,7 @@ const MyQuizz = () => {
   const handleStart = async () => {
     setPostLoading(true)
     try{
-      const response = await axios.post(`http://localhost:9999/api/doing-quizz/${selectedQuizIndex}`)
+      const response = await axios.post(`http://localhost:8000/api/doing-quizz/${selectedQuizIndex}`)
       navigate('/exam-taking', {state: JSON.stringify(response.data)})
     }catch (error){
       console.error('Error posting data:', error);
