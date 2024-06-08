@@ -3,7 +3,7 @@ import axios from "axios";
 export async function fetchAllExams() {
   try {
     const response = await axios.get("http://localhost:9999/api/quizzes");
-    return response.data; // Axios automatically handles JSON parsing
+    return response.data.content; // Axios automatically handles JSON parsing
   } catch (error) {
     console.error("Failed to fetch exams:", error);
     // Handle errors, such as by returning an empty array or a specific error message

@@ -1,9 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  Snackbar,
-  LinearProgress,
-  Alert,
-} from "@mui/material";
+import { Snackbar, LinearProgress, Alert } from "@mui/material";
 import Slide from "@mui/material/Slide";
 import ExamFilters from "./examFilters";
 import ExamTable from "./examTable";
@@ -20,15 +16,23 @@ const ExamManager = () => {
   const [selectedExam, setSelectedExam] = useState(null);
   const [filteredExams, setFilteredExams] = useState([]);
   const [modalShow, setModalShow] = useState(false);
+  const [fetching, setFetching] = useState(false);
 
   useEffect(() => {
-    fetchExams();
-  }, []);
+    if (!fetching) {
+      fetchExams();
+    }
+  }, [fetching]);
 
   const fetchExams = async () => {
-    const data = await fetchAllExams();
-    setExamListState(data);
-    setFilteredExams(data);
+    try {
+      const data = await fetchAllExams();
+      setFetching(true);
+      setExamListState(data);
+      setFilteredExams(data);
+    } catch (error) {
+      console.error("Failed to fetch exams:", error);
+    }
   };
 
   const handleExamSelect = (exam) => {
